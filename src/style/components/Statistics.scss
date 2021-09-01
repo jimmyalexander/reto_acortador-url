@@ -1,0 +1,80 @@
+.container_statistics{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .statistics_title{
+    p{
+      color: gray
+    }
+  }
+  .statistics_details{
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    span{
+      top: 5%;
+      width: 10px;
+      height: 80%;
+      background-color: $Cyan;
+      position: absolute;
+      z-index: 50;
+    }
+    .detail-1,.detail-2,.detail-3{
+      background-color: $light;
+      position: relative;
+      z-index: 1000;
+      margin: 10% 10% 15% 10%;
+      border-radius: 10px;
+      padding: 5% ;
+      figure{
+        position: relative;
+        width: 100%;
+        top: -70px;
+        img{
+          background: $VeryDark;
+          border-radius: 50%;
+          padding: 5%;
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: 768px){
+  .container_statistics{
+    .statistics_details{
+      margin-bottom: 10%;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      span{
+        width: 80%;
+        height: 10px;
+        top: 60%;
+      }
+      .detail-2{
+        top: 50px;
+      }
+      .detail-3{
+        top: 100px;
+      }
+      .detail-1,.detail-2,.detail-3{
+        margin: 2% ;
+        padding:3%;
+        width: 18%;
+
+        figure{
+          position: absolute;
+          top: -20%;
+          left: -20%;
+        }
+        .detail-info{
+          margin-top: 10%;
+        }
+      }
+    }
+  } 
+}

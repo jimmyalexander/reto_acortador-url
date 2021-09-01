@@ -1,0 +1,98 @@
+.container_link{
+  text-align: center;
+  margin-top: 20%;
+  background-color:$Gray;
+  .container_shorten{
+    width: 100%;
+    form{
+      position: relative;
+      z-index: 1000;
+      top: -60px;
+      padding: 5% 10% 5% 10%;
+      margin: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 10px;
+      align-items: center;
+      background-color:  $DarkViolet;
+      
+      input{
+        position: relative;
+        z-index: 1000;  
+        border: none;
+        width: 100%;
+        border-radius: 10px;
+        padding: 10px 0 10px 10px;
+        outline: none;
+
+      }
+      button{
+          position: relative;
+          z-index: 1000;
+          background-color: $Cyan;
+          border-radius: 10px;
+          color: $light;
+          border: none;
+          margin-top: 10%;
+          padding: 10px;
+          text-align: center;
+          width: 100%;
+          cursor: pointer;
+          
+      }
+      button:hover{
+        color: $DarkViolet;
+      }
+    }
+    form::after{
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      position: absolute;
+      z-index: 2;
+      background-color:$VioletLight;
+      clip-path: ellipse(230px 100px at 60% 10%);
+    }
+    .red::placeholder{
+      color: $Red;
+    }
+  }
+  
+}
+
+
+@media (min-width: 768px){
+  .container_link{
+    margin-top: -5%;
+
+    .container_shorten{
+      form{
+        flex-direction: row;
+        align-items: center;
+        padding: 5%;
+        input{
+
+        }
+        button{
+          width: 20%;
+          margin-top: 0%;
+          margin-left: 2%;
+        }
+      }
+      form::after{
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        background-color:$VioletLight;
+        clip-path: ellipse(430px 200px at 60% 10%);
+      }
+    }
+  }
+}

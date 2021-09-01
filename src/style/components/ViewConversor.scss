@@ -1,0 +1,41 @@
+.container_View{
+  width: 100%;
+  display: none;
+  
+  .view-1,.view-2,.view-3{
+    background-color: $light;
+    margin: 5%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    
+    button{
+      background-color:  $Cyan;
+      border-radius: 10px;
+      color: $light;
+      border: none;
+      margin-top: 5%;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+      cursor: pointer;  
+    }
+    .original_link{
+      color: hsl(256, 18%, 29%);
+      width: 100%;
+      font-size: 1rem;
+      border-bottom: 0.5px solid  $Gray;
+      margin-bottom: 5%;
+      
+    }
+  }
+  input{
+    background: $light;
+    border: none;
+    color: $Cyan;
+  }
+}
+.active{
+  display: block;
+}

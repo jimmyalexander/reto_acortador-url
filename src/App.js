@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { LinkContext } from './LinkContext';
+import { Principal } from './pages/Principal';
+import './style/App.scss';
 
 function App() {
+  const [linkCut, setLinkCut] = useState({
+    obj: {},
+    ok: false,
+    loader: false
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LinkContext.Provider value={
+      {
+        linkCut,
+        setLinkCut,
+      }
+    }>
+      <Principal />
+    </LinkContext.Provider>
   );
 }
 
